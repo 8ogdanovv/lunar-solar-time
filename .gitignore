@@ -1,0 +1,11 @@
+/VictorMonoAll
+/node_modules
+/cv
+/.vscode
+
+desktop.ini
+*.png
+package-lock.json
+planetTable.js
+server.mjs
+vsop87Data.js

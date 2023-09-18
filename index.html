@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" spellcheck="false">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stop watch</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      table {
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="page" id="page">
+    <div class="moonAndSun">
+      <canvas id="sun"></canvas>
+      <canvas id="moon"></canvas>
+    </div>
+    <table id="planetTable"></table>
+    <div class="watch">
+      <svg
+        viewBox="0 0 160 160"
+        class="watch__pad"
+      >
+        <defs>
+          <g id="lines" class="watch__pad-lines">
+            <line x1=" 71" x2=" 79"></line>
+            <line x1="-71" x2="-79"></line>
+            <line y1=" 71" y2=" 79"></line>
+            <line y1="-71" y2="-79"></line>
+          </g>
+        </defs>
+        <g transform="translate(80 80)">
+          <use href="#lines" transform="rotate( 0)"></use>
+          <use href="#lines" transform="rotate( 6)"></use>
+          <use href="#lines" transform="rotate(12)"></use>
+          <use href="#lines" transform="rotate(18)"></use>
+          <use href="#lines" transform="rotate(24)"></use>
+          <use href="#lines" transform="rotate(30)"></use>
+          <use href="#lines" transform="rotate(36)"></use>
+          <use href="#lines" transform="rotate(42)"></use>
+          <use href="#lines" transform="rotate(48)"></use>
+          <use href="#lines" transform="rotate(54)"></use>
+          <use href="#lines" transform="rotate(60)"></use>
+          <use href="#lines" transform="rotate(66)"></use>
+          <use href="#lines" transform="rotate(72)"></use>
+          <use href="#lines" transform="rotate(78)"></use>
+          <use href="#lines" transform="rotate(84)"></use>
+        </g>
+      </svg>
+
+      <svg
+        viewBox="0 0 2000 2000"
+        id="back-box"
+      >
+        <defs>
+          <g id="back-angles" class="back-design">
+            <line y1="0" y2="2000"></line>
+            <!-- <line x1="0" x2="-79"></line> -->
+            <!-- <line y1="0" y2=" 79"></line> -->
+            <!-- <line y1="0" y2="-79"></line> -->
+          </g>
+        </defs>
+        <g transform="translate(1000 1000)">
+
+          <use href="#back-angles" transform="rotate( 0)"></use>
+          <use href="#back-angles" transform="rotate(12)"></use>
+          <use href="#back-angles" transform="rotate(24)"></use>
+          <use href="#back-angles" transform="rotate(36)"></use>
+          <use href="#back-angles" transform="rotate(48)"></use>
+          <use href="#back-angles" transform="rotate(60)"></use>
+          <use href="#back-angles" transform="rotate(72)"></use>
+          <use href="#back-angles" transform="rotate(84)"></use>
+          <use href="#back-angles" transform="rotate(96)"></use>
+          <use href="#back-angles" transform="rotate(108)"></use>
+          <use href="#back-angles" transform="rotate(120)"></use>
+          <use href="#back-angles" transform="rotate(132)"></use>
+          <use href="#back-angles" transform="rotate(144)"></use>
+          <use href="#back-angles" transform="rotate(156)"></use>
+          <use href="#back-angles" transform="rotate(168)"></use>
+          <use href="#back-angles" transform="rotate(180)"></use>
+          <use href="#back-angles" transform="rotate(192)"></use>
+          <use href="#back-angles" transform="rotate(204)"></use>
+          <use href="#back-angles" transform="rotate(216)"></use>
+          <use href="#back-angles" transform="rotate(228)"></use>
+          <use href="#back-angles" transform="rotate(240)"></use>
+          <use href="#back-angles" transform="rotate(252)"></use>
+          <use href="#back-angles" transform="rotate(264)"></use>
+          <use href="#back-angles" transform="rotate(276)"></use>
+          <use href="#back-angles" transform="rotate(288)"></use>
+          <use href="#back-angles" transform="rotate(300)"></use>
+          <use href="#back-angles" transform="rotate(312)"></use>
+          <use href="#back-angles" transform="rotate(324)"></use>
+          <use href="#back-angles" transform="rotate(336)"></use>
+          <use href="#back-angles" transform="rotate(348)"></use>
+          <use href="#back-angles" transform="rotate(360)"></use>
+        </g>
+      </svg>
+
+      <svg
+        viewBox="0 0 2000 2000"
+        id="six-box"
+      >
+        <defs>
+          <g id="six-cardinal" class="six-cardinal">
+            <line y1="0" y2="2000"></line>
+            <!-- <line x1="0" x2="-2000"></line> -->
+            <!-- <line y1="0" y2=" 79"></line> -->
+            <!-- <line y1="0" y2="-79"></line> -->
+          </g>
+        </defs>
+        <g transform="translate(1000 1000)">
+          <use href="#six-cardinal" transform="rotate( 0)"></use>
+          <use href="#six-cardinal" transform="rotate(60)"></use>
+          <use href="#six-cardinal" transform="rotate(120)"></use>
+          <use href="#six-cardinal" transform="rotate(180)"></use>
+          <use href="#six-cardinal" transform="rotate(240)"></use>
+          <use href="#six-cardinal" transform="rotate(300)"></use>
+          <use href="#six-cardinal" transform="rotate(360)"></use>
+        </g>
+      </svg>
+
+      <svg
+        viewBox="0 0 2000 2000"
+        id="lunar-day-angle"
+      >
+        <polygon
+          points="1000 1000 1000 0 1215 0"
+          stroke="green"
+          fill="#4c4"
+          stroke-width="0"
+        />
+      </svg>
+
+      <div class="watch__hours">
+        <div class="watch__hours-hour"></div>
+      </div>
+      <div class="watch__minutes">
+        <div class="watch__minutes-minute"></div>
+      </div>
+      <div class="watch__seconds">
+        <div class="watch__seconds-second"></div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <!-- <script type="module" src="./planetTable.js" defer></script> -->
+  </body>
+</html>
