@@ -18,6 +18,15 @@ function getColorString(moonDay) {
   return colorString;
 }
 
+function passMoonDayFromJsToCss() {
+  // Calculate the moon day and store it in a variable.
+  const moonDay = getMoonDay();
+  // Get the #lunar-day-angle element.
+  const lunarDayAngle = document.querySelector('#lunar-day-angle');
+  // Set the value of the custom property --moon-day.
+  lunarDayAngle.style.setProperty('--moon-day', `${moonDay}`);
+}
+
 const runWatch = () => {
   const seconds = '--seconds: -' + new Date().getSeconds() + 's';
   const minutes = '--minutes: -' + (
@@ -33,15 +42,10 @@ const runWatch = () => {
   document.querySelector('.watch__minutes-minute').style = minutes;
   document.querySelector('.watch__hours-hour').style = hours;
 
+  passMoonDayFromJsToCss();
+
   setInterval(() => {
-    // Calculate the moon day and store it in a variable.
-    const moonDay = getMoonDay();
-    // Get the #lunar-day-angle element.
-    const lunarDayAngle = document.querySelector('#lunar-day-angle');
-    // Set the value of the custom property --moon-day.
-    lunarDayAngle.style.setProperty('--moon-day', `${moonDay}`);
-    // Apply the transform property directly based on moonDay.
-    // lunarDayAngle.style.transform = `translate(50%, 0) rotate(calc(var(--moon-day) * 12deg))`;
+    passMoonDayFromJsToCss();
   }, 60000);
 }
 
