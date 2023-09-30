@@ -6,7 +6,7 @@ The Stopwatch project is a web application that functions as a digital stopwatch
 
 ## Project Screenshot
 
-[![Stopwatch Project Screenshot](https://github.com/vadym4che/blob/main/lunar-solar-time/screenshot.png)](https://vadym4che.github.io/lunar-solar-time/)
+[![Stopwatch Project Screenshot](https://github.com/vadym4che/lunar-solar-time/blob/main/screenshot.png)](https://vadym4che.github.io/lunar-solar-time/)
 
 You can access the live version of this project on GitHub Pages here: `<Insert Your GitHub Pages Link>`.
 
