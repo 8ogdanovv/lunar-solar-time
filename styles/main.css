@@ -370,8 +370,12 @@
   width: 100vmax;
   height: 100vmax;
   z-index: 0;
-  /* transform-origin: center; */
-  transform: rotate(calc((var(--moon-day) - 1) * 12deg));
+  /*transform-origin: center;
+  */transform: scale(1.5) rotate(calc((var(--moon-day) - 1) * 12deg));
+  -webkit-transform: scale(1.5) rotate(calc((var(--moon-day) - 1) * 12deg));
+  -moz-transform: scale(1.5) rotate(calc((var(--moon-day) - 1) * 12deg));
+  -ms-transform: scale(1.5) rotate(calc((var(--moon-day) - 1) * 12deg));
+  -o-transform: scale(1.5) rotate(calc((var(--moon-day) - 1) * 12deg));
 }
 
 .watch::after {
